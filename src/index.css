@@ -19,7 +19,31 @@ code {
 
 .navHeader {
   text-align: float!important;
+  margin-bottom: 68px;
 }
 .App {
   text-align: center;
+}
+
+.formstyle {
+  margin-right: 25px;
+  color: #476a2e;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.formlayout {
+  text-align: center;
+}
+
+.formbox {
+  padding: 2rem 2.5rem;
+  border: 1px solid black;
+  width: 640px;
+  margin: auto;
+}
+
+.formcolor {
+  background-color: #fffdd0;
+  width: 560px;
 }

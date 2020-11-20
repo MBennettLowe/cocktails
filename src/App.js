@@ -5,6 +5,9 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import FormControl from 'react-bootstrap/FormControl';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faGlassMartiniAlt} from '@fortawesome/free-solid-svg-icons'
+
 
 
 
@@ -15,7 +18,10 @@ function App() {
     <div className="App">
       <div>
         <Navbar className="navHeader" bg="dark" variant="dark">
-          <Navbar.Brand className="navStyle" href="#home">Navbar</Navbar.Brand >
+        
+          <Navbar.Brand className="navStyle" href="#home"> <FontAwesomeIcon  size='lg' icon={faGlassMartiniAlt} />
+
+          </Navbar.Brand >
           <Nav className="mr-auto">
         <Nav.Link className="navStyle" href="#home">Home</Nav.Link>
         <Nav.Link className="navStyle" href="#features">About</Nav.Link>
@@ -31,20 +37,21 @@ function App() {
       
 
         <div>
-          <form>
-            <label>
-              search your favorite cocktail
-            </label>
-            <input type="text" name="name" id="name"></input>
+          <form className="formbox">
+            <div className="formlayout">
+              <label className="formstyle">
+                <h3>search your favorite cocktail</h3>
+                
+
+              </label>
+               <p><input className="formcolor" type="text" name="name" id="name"></input></p>
+              
+            </div>
           </form>
-        </div>
-      </div>
-  
-  
       
-
-
+      </div>
+      </div>
   );
-}
+  }
 
 export default App;
