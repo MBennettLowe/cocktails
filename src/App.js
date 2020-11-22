@@ -17,12 +17,12 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Navbar className="navHeader" bg="dark" variant="dark">
+        <Navbar className="navHeader">
         
-          <Navbar.Brand className="navStyle" href="#home"> <FontAwesomeIcon  size='lg' icon={faGlassMartiniAlt} />
+          <Navbar.Brand className="navStyle" href="#home"> <FontAwesomeIcon  size='2x' className="iconstyle" icon={faGlassMartiniAlt} />
 
           </Navbar.Brand >
-          <Nav className="mr-auto">
+          <Nav className="ml-auto">
         <Nav.Link className="navStyle" href="#home">Home</Nav.Link>
         <Nav.Link className="navStyle" href="#features">About</Nav.Link>
         <Nav.Link className="navStyle" href="#pricing">Login</Nav.Link>
