@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 import FormControl from 'react-bootstrap/FormControl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGlassMartiniAlt} from '@fortawesome/free-solid-svg-icons'
+import logo from './images/logo.jpg';
 
 
 
@@ -19,7 +20,8 @@ function App() {
       <div>
         <Navbar className="navHeader">
         
-          <Navbar.Brand className="navStyle" href="#home"> <FontAwesomeIcon  size='2x' className="iconstyle" icon={faGlassMartiniAlt} />
+          <Navbar.Brand className="navStyle" href="#home">  
+          <img src={logo  } alt="martini glass" />
 
           </Navbar.Brand >
           <Nav className="ml-auto">
@@ -37,6 +39,8 @@ function App() {
       
 
         <div>
+      
+      
           <form className="formbox">
             <div className="formlayout">
               <label className="formstyle">
