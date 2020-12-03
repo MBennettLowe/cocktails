@@ -8,7 +8,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGlassMartiniAlt} from '@fortawesome/free-solid-svg-icons'
 import logo from './images/logo.jpg';
-
+import {Router, Route, Link, Switch } from 'react-router-dom';
 
 
 
@@ -21,7 +21,7 @@ function App() {
         <Navbar className="navHeader">
         
           <Navbar.Brand className="navStyle" href="#home">  
-          <img src={logo  } alt="martini glass" />
+          <img src={logo} alt="martini glass" />
 
           </Navbar.Brand >
           <Nav className="ml-auto">
