@@ -8,16 +8,18 @@ import FormControl from 'react-bootstrap/FormControl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGlassMartiniAlt} from '@fortawesome/free-solid-svg-icons'
 import logo from './images/logo.jpg';
-import {Router, Route, Link, Switch } from 'react-router-dom';
-
+import {BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Login from './components/Login';
+import About from './components/about';
 
 
 
 
 function App() {
   return (
-    <div className="App">
-      <div>
+    // <div className="App">
+    //   <div>
+      <Router>
         <Navbar className="navHeader">
         
           <Navbar.Brand className="navStyle" href="#home">  
@@ -25,24 +27,27 @@ function App() {
 
           </Navbar.Brand >
           <Nav className="ml-auto">
-        <Nav.Link className="navStyle" href="#home">Home</Nav.Link>
-        <Nav.Link className="navStyle" href="#features">About</Nav.Link>
-        <Nav.Link className="navStyle" href="#pricing">Login</Nav.Link>
-        </Nav>
-        
+            <Link className="navStyle" to="/">Home</Link>
+            <Link className="navStyle" to="/about">About</Link>
+            <Link className="navStyle" to="/login">Login</Link>
+          </Nav>
        </Navbar>
-
-      <br />
-      </div>
+          <Route path="/"></Route>
+          <Route path="/about"><About /></Route>
+          <Route path="/login"><Login /></Route>
+    </Router>
+       //<br />
+       //</div>
       
-        
-      
-
+  )
+    function Form() {
+      return(
         <div>
       
       
           <form className="formbox">
             <div className="formlayout">
+              
               <label className="formstyle">
                 <h3>search your favorite cocktail</h3>
                 
@@ -53,9 +58,9 @@ function App() {
             </div>
           </form>
       
-      </div>
-      </div>
-  );
-  }
+       </div>
+       //</div>
+      )  
+  }}
 
 export default App;
