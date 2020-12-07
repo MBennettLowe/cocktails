@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Castoro:regular,bold,italic&subset=latin,latin-ext');
+
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Castoro', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -85,8 +87,31 @@ code {
 
 .iconstyle {
   color:  #476a2e;
-
 }
+
+.navbar-brand {
+  font-family: 'Castoro';
+  margin-left: 5px;
+  font-size: 24px !important;
+}
+
+.firstcharacter {
+    color: #476a2e;
+    font-size: 75px;
+    line-height: 80px;
+    padding-top: 15px;
+    padding-right: 8px;
+    padding-left: 3px;
+    margin-top: 15px;
+  }
+
+  .imgStyle {
+    padding-bottom: 25px;
+    width: 67px;
+    height: 75px;
+    margin-top: -15px !important;
+    
+  }
 
 
 
