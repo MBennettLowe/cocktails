@@ -33,7 +33,7 @@ code {
   padding: 0.25rem 0.5rem;
   transition: var(--mainTransition);
   margin-right: 10px;
-  margin-left: 10px;
+  
 }
 
 .navStyle a:hover {

@@ -12,10 +12,13 @@ import logo from './images/logo.jpg';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Link
 } from "react-router-dom";
 import FormCom from './components/FormCom';
 //import FormCom from './components/FormCom';
+import About from './components/about';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -36,13 +39,17 @@ function App() {
 
           </Navbar.Brand >
           <Nav className="ml-auto">
-        <Nav.Link className="navStyle" href="#home">Home</Nav.Link>
-        <Nav.Link className="navStyle" href="#features">About</Nav.Link>
-        <Nav.Link className="navStyle" href="#pricing">Login</Nav.Link>
-        </Nav>
-        
+            <Link className="navStyle" to="/">Home</Link>
+            <Link className="navStyle" to="/about">About</Link>
+            <Link className="navStyle" to="/contact">Contact</Link>
+          </Nav>
        </Navbar>
        </div>
+
+          <Route path="/about"><About /></Route>
+          <Route path="/contact"><Contact /></Route>
+          <Route path="/"></Route>
+
        <FormCom />
        </Router>
 
@@ -50,28 +57,6 @@ function App() {
 
   )     
   }
-
-  // function Home() {
-  //   return(
-  //     <div>
-  //       <h2>Home</h2>
-  //     </div>
-  //   )
-  
-    
-  // }
-
-
-      //  class FormCom extends React.Component {
-      //    render() {
-      //     return (
-      //     <div>
-      //       <p>Works</p>
-      //       </div>
-      //   )}
-      //   }
-        
-          
 
 
 export default App;
