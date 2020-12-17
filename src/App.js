@@ -31,8 +31,9 @@ const axios = require('axios');
   function App() {
      return (
        <div>
+          <NavRouter />
            <FormCom />
-          < NavRouter />
+         
           </div>
     )};  
    

@@ -49,9 +49,6 @@ import Contact from './Contact';
                 <Route path="/about"><About /></Route>
                 <Route path="/contact"><Contact /></Route>
                 <Route path="/"></Route>
-      
-            <FormCom />
-           < NavRouter />
             </Router>   
             
 )};
