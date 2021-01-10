@@ -10,7 +10,7 @@ import React from 'react';
         
 
             </label>
-        <p><input className="formcolor" type="text" name="name" id="name" placeholder="Search your favorite Margarita recipe"></input></p>
+        <p><input className="formcolor" type="text" s="term" name="name" id="name" placeholder="Search your favorite cocktail recipe"></input></p>
       
         </div>
           </form>
