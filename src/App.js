@@ -28,7 +28,7 @@ import { render } from '@testing-library/react';
 
 // initializing Axios Instance
 const api = axios.create({
-  baseURL: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+  baseURL: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 })
 
 class App extends Component {
@@ -39,19 +39,22 @@ class App extends Component {
 
   constructor() {
     super();
-    api.get('/').then(res => {
-      console.log(res.data)
-    })    
-  }
+    api.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
+      .then(res => {
+       console.log(res.data)
+      }, error => {
+        console.log(error);
+      }
+  )}
 
   render() {
   return (
     <div>
-      {/* <NavRouter />
+      <NavRouter />
       <FormCom /> 
-      <Layout /> */}
+      <Layout />
 
-      {this.state.drinks.map(drink => <p key={drink.id}>{drink.strDrink}</p>)}
+      {this.state.drinks.map(drink => <p key={drink.idDrink}>{drink.strDrink}</p>)}
     </div>
         );
       }
