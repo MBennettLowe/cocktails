@@ -32,21 +32,24 @@ const api = axios.create({
 })
 
 class App extends Component {
-
-  state = {
-    drinks: []
-  }
-
   constructor() {
     super();
-    api.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
-      .then(res => {
-       console.log(res.data)
-      }, error => {
-        console.log(error);
-      }
-  )}
+    this.state = {
+      drinks: []
+    };
+  }
 
+    //   // The componentDidMount() method runs after the component output has been rendered to the DOM.
+componentDidMount() {
+  api.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
+  .then(res => {
+    const drinks = res.data.drinks
+   console.log(res.data)
+   console.log(drinks);
+   this.setState({ drinks });
+  });
+}
+   
   render() {
   return (
     <div>
