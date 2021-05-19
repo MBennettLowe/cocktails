@@ -21,7 +21,7 @@ import FormCom from './components/FormCom';
 import About from './components/About';
 import Contact from './components/Contact';
 import NavRouter from './components/NavRouter'
-import Layout from './components/Layout';
+import Cards_new from './components/Cards_new';
 import { render } from '@testing-library/react';
 
  const axios = require('axios');
@@ -32,34 +32,62 @@ const api = axios.create({
 })
 
 class App extends Component {
+    constructor(props) {
+    super(props);
 
-  state = {
-    drinks: []
+    this.state = { 
+      drinks: [],
+      loading: true,
+      drink: null,
+    }
+    
+    
   }
-
-  constructor() {
-    super();
-    api.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
-      .then(res => {
-       console.log(res.data)
+      
+    loadData = () => {
+      this.setState({loading: true });
+      return axios
+      .get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
+      .then(response => {
+      //  console.log(response.data.drinks);
+       this.setState({drinks: response.data.drinks});
+       console.log(this.state.drinks);
+       // how do I define setState to check its contents
+        // this.setState({ drink: data.drinks[0]}
       }, error => {
         console.log(error);
       }
-  )}
+
+    )}
+    
+    // api.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
+    //   .then(response => {
+    //    console.log(response);
+    //    this.setState({drinks: response.data})
+    //   }, error => {
+    //     console.log(error);
+    //   }
+    
+    
+    
+    componentDidMount() {
+      this.loadData();
+    }
 
   render() {
-  return (
-    <div>
-      <NavRouter />
-      <FormCom /> 
-      <Layout />
-
-      {this.state.drinks.map(drink => <p key={drink.idDrink}>{drink.strDrink}</p>)}
-    </div>
+    // const {drinks} = this.state.drinks;
+    // console.log(Hello);
+      return (
+        <div>
+          <NavRouter />
+          <FormCom /> 
+          <Cards_new drinks={this.state.drinks} />
+          {/* <Cards_new drinks={ drinks } />  */}
+        </div>
         );
       }
-}
-   
+
+    } 
    
   export default App;
 
